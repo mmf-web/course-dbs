@@ -1,1 +1,1 @@
-SELECT name FROM categories ORDER BY name;
+-- TODO: Реализовать запрос для получения всех категорий

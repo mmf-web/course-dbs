@@ -1,6 +1,1 @@
-SELECT 
-    category,
-    SUM(amount) as total
-FROM expenses 
-GROUP BY category 
-ORDER BY total DESC;
+-- TODO: Реализовать запрос для получения общей суммы расходов по каждой категории

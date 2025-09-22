@@ -1,0 +1,1 @@
+-- TODO: вставить запись в таблицу expenses с параметрами amount, category, description

@@ -1,0 +1,26 @@
+{
+  "name": "telegram-finance-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot for financial tracking",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node --test *.test.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "promised-sqlite3": "^2.1.0",
+    "sqlite3": "^5.1.6",
+    "telegraf": "^4.15.6"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "finance",
+    "sqlite"
+  ],
+  "author": "",
+  "license": "MIT"
+}

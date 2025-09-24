@@ -1,1 +1,1 @@
--- TODO: Реализовать запрос для получения общей суммы всех расходов
+SELECT SUM(amount) as total FROM expenses;

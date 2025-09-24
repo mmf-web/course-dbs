@@ -1,1 +1,1 @@
--- TODO: Реализовать запрос для добавления нового расхода
+INSERT INTO expenses (amount, category, description) VALUES (?, ?, ?);

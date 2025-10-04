@@ -5,6 +5,30 @@ import fs from 'fs'
  */
 export const commands = [
   {
+    name: 'generate_random_expenses',
+    description: 'Сгенерировать 100 случайных расходов',
+    run: async (db, args) => {
+      const categories = ['food', 'transport', 'entertainment', 'other']
+      const DAY = 1000 * 60 * 60 * 24
+
+      let query = []
+      const data = []
+      for (let i = 0; i < 100; i++) {
+        query.push(`(?, ?, ?, ?)`)
+        data.push(
+          (Math.random() * 1000).toFixed(2),
+          categories[Math.floor(Math.random() * categories.length)],
+          'Тестовый расход ' + i,
+          new Date(Date.now() - Math.floor(Math.random() * 5 * DAY)).toISOString()
+        )
+      }
+
+      const sql = `INSERT INTO expenses (amount, category, description, created_at) VALUES ` + query.join(',')
+      await db.run(sql, data)
+      return 'OK'
+    },
+  },
+  {
     name: 'add',
     description: 'Добавить расход (сумма, категория, описание)',
     run: async (db, args) => {
